@@ -1,0 +1,15 @@
+# Fichiers de compilation ARM
+build/
+*.o
+*.elf
+*.bin
+*.map
+
+# VS Code
+.vscode/.history/
+
+# Documents de recherche et bibliographie
+references/
+
+# Fichiers tests
+tests/
