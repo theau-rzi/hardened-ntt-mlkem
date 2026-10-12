@@ -27,7 +27,8 @@ The implementation is highly vulnerable to voltage or electromagnetic glitching.
 ### 3. Compiler-Induced Vulnerabilities in Bare-Metal
 When compiled for specific microarchitectures (e.g., `arm-none-eabi-gcc` for Cortex-M4), standard C operations like signed bit-shifts (`>>` in `barrett_reduction_3329`) might be compiled into conditional branches or variable-time instructions depending on the compiler's optimization flags and standard interpretation.
 *   **Future Mitigation:** Strict inspection of the generated assembly and implementation of core operations in pure ARM assembly if necessary to guarantee constant-time execution on silicon.
+*   
+## References
 
-## Usage (Algorithmic Benchmark)
-
-The current `main.c` provides a basic functional test and performance comparison against a naive polynomial multiplication algorithm.
+* **Bo-Yin Yang**, *Notes on Short-Limb Modular Multiplication Techniques: Barrett, Montgomery, Plantard, and the Explicit CRT*, Cryptology ePrint Archive, Paper 2026/1743, 2026. [https://eprint.iacr.org/2026/1743](https://eprint.iacr.org/2026/1743)
+* **National Institute of Standards and Technology** (2024), *Module-Lattice-Based Key-Encapsulation Mechanism Standard*. (Department of Commerce, Washington, D.C.), Federal Information Processing Standards Publication (FIPS) NIST FIPS 203. [https://doi.org/10.6028/NIST.FIPS.203](https://doi.org/10.6028/NIST.FIPS.203)
